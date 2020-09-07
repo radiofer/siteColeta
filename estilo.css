@@ -1,0 +1,92 @@
+
+body{
+  background:#1E90FF;
+
+}
+/* -- Bara de navegação -- */
+
+#img-barra {
+  height: 40px;
+  width: 132px;
+  display: block;
+  background: url('img/propaganda_2.jpg') no-repeat;
+  background-size: contain;
+  color: transparent;
+}
+.navbar-brand{
+  padding: 5px 15px;
+}
+
+nav.navbar-transparencia {
+  padding: 15px 0px;
+  background: rgba(0,0,0,0.6);
+  border: none;
+}
+
+/* -- Corpo da Página --*/
+
+
+.carousel-item img{
+  max-width: 1200px;
+  max-height: 400px;
+  width: auto;
+  height:auto;
+}
+.carousel-item h5, p{
+  margin-top: auto;
+}
+#artigos-home{
+  background: #E8E8E8;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.artigo-main{
+  background: #F5F5F5;
+}
+
+/* Pagina de login */
+/*body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}*/
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/*-- PAgina de inscrição --*/
+.margem-inscricao {
+ width: 200px;
+
+}
