@@ -44,13 +44,13 @@ require __DIR__ . '/vendor/autoload.php';
               <a href="Index.php" class="nav-link">Página inicial<span class="sr-only">(visivel)</span> </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Quem Somos</a>
+              <a href="quemsomos.php" class="nav-link">Quem Somos</a>
             </li>
             <li class="nav-item">
               <a href="Inscreva-se.php" class="nav-link">Inscrever-se</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Fale conosco</a>
+              <a href="faleConosco.php" class="nav-link">Fale conosco</a>
             </li>
             <li class="nav-item">
               <a href="Entrar.php" class="nav-link">Entrar</a>
@@ -136,6 +136,15 @@ require __DIR__ . '/vendor/autoload.php';
 
 
   </section>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2020 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Política de privacidade</a></li>
+      <li class="list-inline-item"><a href="#">Termos de uso</a></li>
+      <li class="list-inline-item"><a href="#">Suporte</a></li>
+    </ul>
+  </footer>
 
 <!-- Plugins JQuery  e Popper necessários para o Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -66,13 +66,13 @@
               <a href="Index.php" class="nav-link">Página inicial<span class="sr-only">(visivel)</span> </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Quem Somos</a>
+              <a href="quemsomos.php" class="nav-link">Quem Somos</a>
             </li>
             <li class="nav-item">
               <a href="Inscreva-se.php" class="nav-link">Inscrever-se</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Fale conosco</a>
+              <a href="faleConosco.php" class="nav-link">Fale conosco</a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">Entrar</a>
@@ -103,6 +103,16 @@
       echo 'Usuário não cadastrado';
     }
    ?>
+   <!-- Rodapé -->
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2020 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Política de privacidade</a></li>
+      <li class="list-inline-item"><a href="#">Termos de uso</a></li>
+      <li class="list-inline-item"><a href="#">Suporte</a></li>
+    </ul>
+  </footer>
 
 
 

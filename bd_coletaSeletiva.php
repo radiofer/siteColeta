@@ -7,16 +7,16 @@
   {
 
     //host
-    private $host = '34.95.217.248';
+    private $host = 'localhost';
 
     //usuário
-    private $usuario = 'Coop';
+    private $usuario = 'root';
 
     //Senha
-    private $senha = 'dhglpkr6878575';
+    private $senha = '';
 
     //Banco de Dados
-    private $bancodeDados = 'Cooperativa';
+    private $bancodeDados = 'coleta_seletiva';
 
 
     public function conexaoBD()

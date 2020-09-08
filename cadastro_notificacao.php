@@ -25,7 +25,7 @@
     }
 
   } else {
-    echo 'algo tá errado no código';
+    echo 'algo de errado aconteceu';
   }
 
   if ($telefone_duplo) {
@@ -44,6 +44,6 @@
   if (mysqli_query($link, $sql)) {
     echo 'Parabéns! Inscrição realizada com sucesso.';
   } else {
-    echo 'Opa! Erro ao so inscrever.';
+    echo 'Opa! Erro ao se inscrever.';
   };
 ?>

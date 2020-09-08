@@ -6,6 +6,30 @@
   if(!isset($_SESSION['administrador'])) {
     header('Location: Index.php?erro=1');
   }
+
+  //Contador de usuários
+  require_once('bd_coletaSeletiva.php');
+
+  $BDColSel = new bd();
+  $link = $BDColSel->conexaoBD();
+
+  $sql = "SELECT COUNT(usuario) AS 'qtde_usuarios' FROM usuarios";
+
+  $countUser = mysqli_query($link, $sql);
+
+  $contador = 0;
+  if ($countUser) {
+    $contador = mysqli_fetch_array($countUser, MYSQLI_ASSOC);
+    $qtde_usuarios = $contador['qtde_usuarios'];
+  } else{
+
+    echo 'Erro na requisição';
+
+  }
+
+
+
+
 ?>
 
 <!DOCTYPE HTML>
@@ -96,6 +120,32 @@
           }
         });
 
+      //Script de mensagens do fale conosco
+      function faleConoscoRec(){
+        $.ajax({
+          url: 'recuperaFaleConosco.php',
+          success: function(data){
+            $('#mensagemexibida').html(data);
+            //função patra apagar mensagem do fale conosco
+            $('#apagafale').click(function(){
+              var delete_mensagem = $(this).data('del_msg');
+              $.ajax({
+                url: 'apagaFaleConosco.php',
+                method: 'post',
+                data: {exclui_msg_adm: delete_mensagem},
+                success: function(data){
+                  alert('Mensagem excluída com sucesso');
+                }
+
+              });
+            });
+          }
+
+        });
+      }
+      faleConoscoRec();
+
+
     });
   </script>
 </head>
@@ -120,18 +170,10 @@
         <div class="collapse navbar-collapse" id="escondemenu">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a href="home.php" class="nav-link">Home<span class="sr-only">(visivel)</span> </a>
+              <a href="home.php" class="nav-link">Administração<span class="sr-only">(visivel)</span> </a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Quem Somos</a>
-            </li>
-            <li class="nav-item">
-              <a href="Inscreva-se.php" class="nav-link">Inscrever-se</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Fale conosco</a>
-            </li>
-            <li class="nav-item">
+                       
+           <li class="nav-item">
               <a href="sair.php" class="nav-link">Sair</a>
             </li>
           </ul>
@@ -149,9 +191,9 @@
       <div class="col-6">
         <div class="card">
           <div class="card-body">
-            <h5>Painel de usuários</h5>
-            <h6> Bem vindo <?= $_SESSION['administrador'] ?></h6>
-            <div class="col-12">Usuários <br> 1 </div>
+            <h5 class="card-header">Painel de usuários</h5>
+            <h6 class="card-header"> Bem vindo <?= $_SESSION['administrador'] ?></h6>
+            <div class="card-header">Usuários Cadastrados: <?= $qtde_usuarios ?>  </div>
           </div>
           <div class="card-header">Procurar usuários</div>
             <form class="input-group" action="" method="post" id="procura_usuario" class="">
@@ -159,22 +201,26 @@
               <div class="input-group-append">
                 <button type="button" id="botao_procura_usuario" name="button" class="btn btn-outline-primary" >Procurar</button>
               </div>
-
             </form>
           <div href="#" class="list-group" id="exibe_Usuario">
             <div class="list-group-item" id="usuario_encontrado"></div>
           </div>
-
-
           </div>
-
-
+       
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-header">Mensagens do fale conosco</h5>
+            <br>
+            <div id="mensagemexibida" class="list-group"></div>
+          
+          </div>
+         </div>       
         </div>
 
       <div class="col-6">
         <div class="card">
           <div class="card-body">
-          <div class="card-title">Envio de mensagens</div>
+          <h4 class="card-header">Envio de mensagens</h4>
             <form class="input-group" id="texto_form">
               <input type="text" name="mensagem_texto" id="texto_mensagem" value=""class="form-control" placeholder="Digite aqui a mensagem" maxlength="100">
               <div class="input-group-append">
@@ -194,6 +240,17 @@
     </div>
 
   </div>
+
+  <!-- Rodapé -->
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2020 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Política de privacidade</a></li>
+      <li class="list-inline-item"><a href="#">Termos de uso</a></li>
+      <li class="list-inline-item"><a href="#">Suporte</a></li>
+    </ul>
+  </footer>
 
 <!-- Plugins JQuery  e Popper necessários para o Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

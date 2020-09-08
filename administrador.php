@@ -33,15 +33,5 @@
   } else {
     echo 'Usuário não cadastrado';
   }
-
-  /*
-  //Inserção de dados do usuário no banco de dados
-  $sql = "insert into administradores(adminitrador, senha) values ('$email', '$senha')";
-
-  //Execução da requisição
-  if (mysqli_query($link, $sql)) {
-    echo 'Parabéns! Inscrição realizada com sucesso.';
-  } else {
-    echo 'Opa! Erro ao so inscrever.';
-  };*/
+  
 ?>

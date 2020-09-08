@@ -1,17 +1,10 @@
-<?php
-
-  require __DIR__ . '/vendor/autoload.php';
-
-  $erro_telefone = isset($_GET['erro_telefone']) ? $_GET['erro_telefone'] : 0;
-?>
-
 <!DOCTYPE HTML>
+
 <html lang="pt-br">
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <title>Associação Nova Conquista - Juína - MT</title>
   <link rel="icon" href="img/logo.jpeg">
 
@@ -24,9 +17,7 @@
   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
 </head>
-
-<body class="text-center">
-
+<body>
   <!-- Barra de navegação -->
   </header>
     <nav class="navbar navbar-expand-lg navbar-light navbar-transparencia" style="background-color: #F0FFFF">
@@ -64,42 +55,35 @@
       </div> <!-- fim do container da barra de navegação -->
     </nav>
   </header><!-- fim da configuração da barra de navegação -->
+
+  <br>
+
   <!-- Corpo do site -->
+
   <div class="container">
-   <div class="py-5 text-center">
-     <h2>Inscrição</h2>
-     <p class="lead">Receba notificações dos dias e horários da coleta seletiva em seu bairro, inscreva-se!</p>
-   </div>
-  <div class="row row-cols-3">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
-      <form class="" action="cadastro_notificacao.php" method="post">
-        <div class="form-row">
-          <div class="col-md-10">
-            <label class="" for="formularioNome">Nome Completo</label>
-            <input type="text" class="form-control" id="formularioNome" name="nome" value="" placeholder="Digite aqui o seu nome">
-          </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h2 class="display-3 font-weight-bolder text-muted">Quem Somos</h2>
         </div>
-        <br>
-        <div class="form-row">
-          <div class="col-md-10">
-            <label for="formularioTelefone" class="">Número do seu Telefone</label>
-            <input type="number" class="form-control" id="formularioTelefone" name="telefone" value="" placeholder="Digite aqui o seu telefone">
-                <?php
-                  if ($erro_telefone) {
-                    echo '<font style = "color:red">Esse contato já foi cadastrado</font>';
-                          }
-                ?>
-          </div>
+        <div class="col-md-3"></div>
+  </div>
+  <br>
+  <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <p class="text-justify"> <b> A Associação de Catadores Nova Conquista</b> vivamus consequat nunc non consectetur feugiat. Aenean euismod nibh et pharetra sagittis. Suspendisse luctus convallis nisl, non elementum diam volutpat nec. Sed at porta turpis. Fusce lectus tellus, pellentesque id consectetur in, molestie id neque. Duis id enim ac dui pulvinar venenatis et non tortor. Suspendisse a sapien sed lacus ultricies hendrerit. <br>
+            Fusce tellus nulla, fringilla ut risus vel, pulvinar convallis dolor. Suspendisse elementum, lacus in imperdiet congue, augue tortor suscipit tortor, nec pretium eros urna quis ante. Duis accumsan urna sed tincidunt vehicula. Vestibulum tincidunt purus et justo porta tincidunt ut ut urna. Vestibulum eleifend ligula a nulla posuere scelerisque. Quisque egestas vel ligula in aliquam. Etiam ullamcorper, est vitae iaculis ultrices, dui purus ornare nibh, vel ullamcorper odio purus nec massa. Aenean imperdiet posuere mattis. Integer lacinia scelerisque turpis non imperdiet. Cras tellus dolor, elementum eget lacus et, vestibulum lobortis nisl. In tincidunt libero a odio faucibus, vitae tincidunt enim convallis. Sed lacinia tristique tempus. Vestibulum vehicula, magna eu rutrum rutrum, mauris ante mattis ligula, a malesuada augue est in dui.</p>
         </div>
-              <br>
-              <button type="submit" class="btn btn-primary">Inscrever</button>
-      </form>
-    </div>
-      <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+  </div>
+  
+  
+  
+  
   </div>
 
-  </div>
+  
 
   <!-- Rodapé -->
 
@@ -111,9 +95,6 @@
       <li class="list-inline-item"><a href="#">Suporte</a></li>
     </ul>
   </footer>
-
-
-
 
 <!-- Plugins JQuery  e Popper necessários para o Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

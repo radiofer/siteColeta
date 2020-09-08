@@ -25,6 +25,13 @@ nav.navbar-transparencia {
 
 /* -- Corpo da Página --*/
 
+.container {
+  max-width: 960px;
+}
+
+.lh-condensed { line-height: 1.25; }
+
+
 
 .carousel-item img{
   max-width: 1200px;
@@ -44,16 +51,7 @@ nav.navbar-transparencia {
   background: #F5F5F5;
 }
 
-/* Pagina de login */
-/*body {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f5f5f5;
-}*/
+
 
 .form-signin {
   width: 100%;

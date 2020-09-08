@@ -9,26 +9,22 @@
   //Conexão com o script do banco de dados
   require_once('bd_coletaSeletiva.php');
 
-  $deletar_usuario = $_POST ['excluir_por_adm'];
-
-  if ($deletar_usuario == '') {
-    die();
-  }
+  $deletar_mensagem = $_POST ['exclui_msg_adm'];
 
   //Instancia da classe BancoDeDados
   $BDColSel = new bd();
   $link = $BDColSel->conexaoBD();
 
 
-  $sql = "DELETE FROM usuarios WHERE usuario = '$deletar_usuario'";
+  $sql = "DELETE FROM faleConosco WHERE id_usuario = '$deletar_mensagem'";
 
 
-  $retorno_usuario = mysqli_query($link, $sql);
+  $retorno_msg = mysqli_query($link, $sql);
 
-  if ($retorno_usuario) {
-    while ($textoRegistrado = mysqli_fetch_array($retorno_usuario, MYSQLI_ASSOC)) {
+  if ($retorno_msg) {
+    while ($msgRegistrada = mysqli_fetch_array($retorno_usuario, MYSQLI_ASSOC)) {
 
-      echo $textoRegistrado;
+      echo $msgRegistrada;
 
     }
   } else {
